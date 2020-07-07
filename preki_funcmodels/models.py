@@ -18,10 +18,12 @@ class PrekiNode(StructuredNode):
         try:
             model = cls(id=id)
             model.refresh()
+            if cls.__name__ not in model.labels():
+                raise cls.DoesNotExist()
             return model
         except cls.DoesNotExist:
             if raise_error:
-                raise PrekiException(f'{cls.__name__} not found with {id}', status_code=status.HTTP_404_NOT_FOUND)
+                raise PrekiException(f'{cls.__name__} not found (id={id})', status_code=status.HTTP_404_NOT_FOUND)
             else:
                 return None
 
@@ -37,4 +39,5 @@ class PrekiNode(StructuredNode):
             model = cls.nodes.first(**data)
             return model
         except cls.DoesNotExist:
-            raise PrekiException(f'{cls.__name__} not found with: {({**data})}', status_code=status.HTTP_404_NOT_FOUND)
+            filter = {**data}
+            raise PrekiException(f'{cls.__name__} not found ({filter})', status_code=status.HTTP_404_NOT_FOUND)
