@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "089f162c16ea81077d0c1fbcd8fa43ea22c2f55789b0b27fd880d6113e56dcfe"
+            "sha256": "b89ff35d67e66a0feb89fd798c1fd190af6e6855c4f892f937a946758dbd25ce"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -40,6 +40,10 @@
                 "sha256:4e0477ba0f24e004de2fa79a3236de2bd941f20de0b5db8d976c52a86d7363eb"
             ],
             "version": "==1.7.4"
+        },
+        "preki-funcutils": {
+            "git": "git://github.com/GoPreki/FunctionUtilsHandler",
+            "ref": "add7e315d97d54b4ff6f59f95fcf1b252a95b70a"
         },
         "pytz": {
             "hashes": [

@@ -9,6 +9,7 @@ flake8 = "*"
 
 [packages]
 neomodel = "==3.3.2"
+preki-funcutils = {git = "git://github.com/GoPreki/FunctionUtilsHandler",ref = "master"}
 
 [requires]
 python_version = "3.7"
