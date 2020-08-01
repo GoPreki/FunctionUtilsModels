@@ -34,10 +34,13 @@ class PrekiNode(StructuredNode):
 
     @classmethod
     # @db.read_transaction
-    def get_first(cls, data):
+    def get_first(cls, data, raise_error=True):
         try:
             model = cls.nodes.first(**data)
             return model
         except cls.DoesNotExist:
-            filter = {**data}
-            raise PrekiException(f'{cls.__name__} not found ({filter})', status_code=status.HTTP_404_NOT_FOUND)
+            if raise_error:
+                filter = {**data}
+                raise PrekiException(f'{cls.__name__} not found ({filter})', status_code=status.HTTP_404_NOT_FOUND)
+            else:
+                return None
