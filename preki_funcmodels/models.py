@@ -47,10 +47,12 @@ class PrekiNode(StructuredNode):
                 return None
 
 
-class ChoiceType:
+class ChoiceType():
 
     @classproperty
     def values(cls):
-        if not hasattr(cls, 'Types'):
-            raise Exception(f'{cls.__name__} must have an inner "Types" class')
-        return [(k.value, k) for k in cls.Types]
+        return cls._value2member_map_
+
+    @classproperty
+    def has_value(cls, value):
+        return value in cls._value2member_map_
