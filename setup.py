@@ -14,7 +14,7 @@ setup(
     description="Python library for Preki Functions usage with Neomodel Models",
     long_description="Python library for Preki Functions usage with Neomodel Models",
     install_requires=[
-        "neomodel >= 3.3.2",
+        "neomodel @ git+git://github.com/GoPreki/neomodel@master",
         "preki_funcutils @ git+git://github.com/GoPreki/FunctionUtilsHandler@master"
     ],
 )
