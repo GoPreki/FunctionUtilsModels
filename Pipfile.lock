@@ -43,7 +43,7 @@
         },
         "preki-funcutils": {
             "git": "git://github.com/GoPreki/FunctionUtilsHandler",
-            "ref": "add7e315d97d54b4ff6f59f95fcf1b252a95b70a"
+            "ref": "5220c17ffc7b5b7c893a11b97f2aa0bb6e571450"
         },
         "pytz": {
             "hashes": [
