@@ -1,5 +1,4 @@
 from neomodel import StructuredNode
-from neomodel.util import classproperty
 from preki_funcutils import status
 from preki_funcutils.exceptions import PrekiException
 
@@ -45,14 +44,3 @@ class PrekiNode(StructuredNode):
                 raise PrekiException(f'{cls.__name__} not found ({filter})', status_code=status.HTTP_404_NOT_FOUND)
             else:
                 return None
-
-
-class ChoiceType():
-
-    @classproperty
-    def values(cls):
-        return cls._value2member_map_
-
-    @classmethod
-    def has_value(cls, value):
-        return value in cls._value2member_map_
