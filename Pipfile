@@ -8,7 +8,7 @@ yapf = "==0.31.0"
 flake8 = "==4.0.1"
 
 [packages]
-preki-funcutils = {git = "git://github.com/GoPreki/FunctionUtilsHandler",ref = "master"}
+preki-funcutils = {ref = "387a7180437216a3d09fadc52c5fbf8ff2aae8a0", git = "git://github.com/GoPreki/FunctionUtilsHandler"}
 
 [requires]
 python_version = "3.9"
