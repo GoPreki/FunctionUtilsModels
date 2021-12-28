@@ -4,12 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-yapf = "*"
-flake8 = "*"
+yapf = "==0.31.0"
+flake8 = "==4.0.1"
 
 [packages]
-neomodel = "==3.3.2"
 preki-funcutils = {git = "git://github.com/GoPreki/FunctionUtilsHandler",ref = "master"}
 
 [requires]
-python_version = "3.7"
+python_version = "3.9"
